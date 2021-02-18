@@ -85,7 +85,7 @@ if(keyDown(RIGHT_ARROW)){
 }
 if (keyDown(LEFT_ARROW)){
     packageSprite.x = packageSprite.x+20;
-    translation={x:-20,y:-0};
+    translation={x:-20,y:0};
     Matter.Body.transalate(packageBody,translation);
 }
 }
