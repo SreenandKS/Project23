@@ -77,8 +77,17 @@ function keyPressed() {
  if (keyCode===DOWN_ARROW) {
     Matter.Body.setStatic(packageBody,false);
 
-    
   }
+if(keyCode===RIGHT_ARROW){
+     packageSprite.x = packageSprite.x=20;
+     translation={x:-20,y:0};
+     Matter.Body.translation(packageBody,translation);
+}
+if (keyCode===LEFT_ARROW){
+    packageSprite.x = packageSprite.x+20;
+    translation={x:-20,y:-0};
+    Matter.Body.transalate(packageBody,translation);
+}
 }
 
 
