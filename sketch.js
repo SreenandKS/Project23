@@ -41,6 +41,8 @@ function setup() {
 
 	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0,isStatic:true});
 	World.add(world, packageBody);
+	helicopterBody = Bodies.circle(helicopterSprite.x,helicopterSprite.y,helicopterSprite.height,helicopterSprite.width);
+	World.add(world, packageBody);
 	
 	b1Body = Bodies.rectangle(box1.x,box1.y,box1.height,box1.width,{isStatic:true});
 	World.add(world,b1Body);
@@ -79,14 +81,14 @@ function keyPressed() {
 
   }
 if(keyCode===RIGHT_ARROW){
-     packageSprite.x = packageSprite.x=20;
+     helicopterSprite.x = packageSprite.x=20;
      translation={x:-20,y:0};
-     Matter.Body.translation(packageBody,translation);
+     Matter.Body.translation(helicopterBody,translation);
 }
 if (keyCode===LEFT_ARROW){
-    packageSprite.x = packageSprite.x+20;
+    helicopterSprite.x = packageSprite.x+20;
     translation={x:20,y:0};
-    Matter.Body.transalate(packageBody,translation);
+    Matter.Body.transalate(helicopterBody,translation);
 }
 }
 
