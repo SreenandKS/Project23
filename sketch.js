@@ -42,7 +42,7 @@ function setup() {
 	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0,isStatic:true});
 	World.add(world, packageBody);
 	helicopterBody = Bodies.circle(helicopterSprite.x,helicopterSprite.y,helicopterSprite.height,helicopterSprite.width);
-	World.add(world, packageBody);
+	World.add(world, helicopterBody);
 	
 	b1Body = Bodies.rectangle(box1.x,box1.y,box1.height,box1.width,{isStatic:true});
 	World.add(world,b1Body);
